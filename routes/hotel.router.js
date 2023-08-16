@@ -2,7 +2,7 @@ const express = require("express");
 
 const hotelRouter = express.Router();
 
-const Hotel = require("../routes/hotelDataImport.router");
+const Hotel = require("../model/hotel.model");
 
 hotelRouter.route("/").get(async (req, res) => {
   const hotelCategory = req.query.hotelCategory;
@@ -16,7 +16,7 @@ hotelRouter.route("/").get(async (req, res) => {
     }
     hotels
       ? res.json(hotels)
-      : res.status(404).json({ messae: "no data found" });
+      : res.status(404).json({ message: "no data found" });
   } catch (err) {
     console.log(err);
   }
