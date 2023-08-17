@@ -18,7 +18,7 @@ const hotelCategoryRouter = require("./routes/hotelCategoryDataImport.route");
 
 const singleHotelRouter= require("./routes/singleHotel.router");
 
-const signUpRouter = require('./routes/auth.router')
+const {signUpRouter,logInRouter}= require('./routes/auth.router')
 
 connectDB();
 
@@ -37,6 +37,8 @@ app.use('/api/categories',categoriesRouter);
 app.use("/api/hotels",singleHotelRouter);
 
 app.use('/auth',signUpRouter);
+
+app.use('/auth',logInRouter)
 
 mongoose.connection.once("open",()=>{
     console.log('connected to DB');
