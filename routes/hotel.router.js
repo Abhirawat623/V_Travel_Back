@@ -2,24 +2,8 @@ const express = require("express");
 
 const hotelRouter = express.Router();
 
-const Hotel = require("../model/hotel.model");
+const hotelHandle = require('../controllers/hotelController')
 
-hotelRouter.route("/").get(async (req, res) => {
-  const hotelCategory = req.query.hotelCategory;
-  try {
-    let hotels;
-
-    if (hotelCategory) {
-      hotels = await Hotel.find({ cateory: hotelCategory });
-    } else {
-      hotels = await Hotel.find({});
-    }
-    hotels
-      ? res.json(hotels)
-      : res.status(404).json({ message: "no data found" });
-  } catch (err) {
-    console.log(err);
-  }
-});
+hotelRouter.route("/").get(hotelHandle);
 
 module.exports = hotelRouter;

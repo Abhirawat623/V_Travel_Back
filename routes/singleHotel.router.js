@@ -1,20 +1,8 @@
-const express= require("express");
-
-const Hotel = require('../model/hotel.model');
+const express = require("express");
 
 const singleHotelRouter = express.Router();
+const singleHotelHandle = require("../controllers/singleHotelController");
 
+singleHotelRouter.route("/:id").get(singleHotelHandle);
 
-singleHotelRouter.route('/:id').
-get( async (req,res)=>{
-try{
- const { id }= req.params;
- const singleHotel= await Hotel.findById(id);
- res.json(singleHotel)
-}
-catch(err){
-    res.json(404),json({message:"No Hotel Found"})
-}
-})
-
-module.exports= singleHotelRouter;
+module.exports = singleHotelRouter;

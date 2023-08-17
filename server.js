@@ -20,7 +20,7 @@ const singleHotelRouter= require("./routes/singleHotel.router");
 
 const {signUpRouter,logInRouter}= require('./routes/auth.router');
 
-const wishlistRouter = require("./routes/wishlist.router")
+const wishlistRouter = require("./routes/wishlist.router");
 
 connectDB();
 
