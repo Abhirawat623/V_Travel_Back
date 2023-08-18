@@ -6,7 +6,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 
-const Port = 8080;
+const PORT = 300;
 
 const cors = require("cors");
 
@@ -55,7 +55,7 @@ app.use("/api/wishlist", wishlistRouter);
 
 mongoose.connection.once("open", ()=> {
     console.log("connected to DB");
-    app.listen(process.env.PORT || Port, ()=> {
+    app.listen(process.env.PORT || PORT, ()=> {
         console.log("Server is running")
     })
 })
