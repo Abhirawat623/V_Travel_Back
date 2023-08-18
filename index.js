@@ -2,7 +2,7 @@ const express = require("express")
 const mongoose = require('mongoose');
 const app = express();
 
-const PORT =3000;
+const PORT =8080;
 
 const dotenv = require("dotenv");
 const cors = require("cors");
