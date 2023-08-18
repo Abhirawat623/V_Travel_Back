@@ -11,7 +11,6 @@ const categoriesHandle = async (req, res) => {
 
 module.exports = categoriesHandle;
 
-const Category = require("../model/category.model");
 
 
 module.exports = categoryHandler;
