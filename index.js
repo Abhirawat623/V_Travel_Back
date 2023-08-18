@@ -1,12 +1,13 @@
+const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/dbconfig");
 
 dotenv.config();
-const express = require("express");
+
 const mongoose = require("mongoose");
 const app = express();
 
-const PORT = 300;
+const PORT = 3000;
 
 const cors = require("cors");
 
