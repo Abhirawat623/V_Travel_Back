@@ -1,12 +1,11 @@
-const dotenv = require("dotenv");
 
-dotenv.config();
+const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 
 const cors = require("cors");
 const connectDB = require("./config/dbconfig");
-
+dotenv.config();
 
 const hotelRouter = require("./routes/hotel.router");
 
@@ -24,13 +23,15 @@ const wishlistRouter = require("./routes/wishlist.router");
 
 const app = express();
 
-const PORT = 3500;
+
 
 app.use(cors());
 
 app.use(express.json());
 
 connectDB();
+
+const PORT = 3500;
 
 app.get("/", (req, res) => {
   res.send("hello users");
@@ -52,9 +53,10 @@ app.use("/auth", logInRouter);
 
 app.use("/api/wishlist", wishlistRouter);
 
+
 mongoose.connection.once("open", () => {
-  console.log("connected to DB");
+  console.log("Connected to DB");
   app.listen(process.env.PORT || PORT, () => {
-    console.log("Server is running");
+    console.log("Server is Up and Running");
   });
 });

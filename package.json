@@ -1,16 +1,19 @@
 {
   "name": "vtraveldb",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Travel App",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": " nodemon server"
+    "start": "node server.js",
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "abhishek rawat",
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
@@ -20,8 +23,5 @@
     "mongodb": "5.7",
     "mongoose": "^7.4.3",
     "uuid": "^9.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
   }
 }
