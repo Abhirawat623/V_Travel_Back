@@ -10,7 +10,3 @@ const categoriesHandle = async (req, res) => {
 };
 
 module.exports = categoriesHandle;
-
-
-
-module.exports = categoryHandler;
