@@ -1,11 +1,12 @@
 
 const dotenv = require("dotenv");
+dotenv.config();
 const express = require("express");
 const mongoose = require("mongoose");
 
 const cors = require("cors");
 const connectDB = require("./config/dbconfig");
-dotenv.config();
+
 
 const hotelRouter = require("./routes/hotel.router");
 
