@@ -1,10 +1,12 @@
+const dotenv = require("dotenv");
+
+dotenv.config();
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
+
 const cors = require("cors");
 const connectDB = require("./config/dbconfig");
 
-dotenv.config();
 
 const hotelRouter = require("./routes/hotel.router");
 
@@ -22,7 +24,7 @@ const wishlistRouter = require("./routes/wishlist.router");
 
 const app = express();
 
-const PORT = 3000;
+const PORT = 3500;
 
 app.use(cors());
 
