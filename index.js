@@ -1,11 +1,12 @@
 const dotenv = require("dotenv");
+const connectDB = require("./config/dbconfig");
 
 dotenv.config();
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 
-const PORT = 8080;
+const Port = 8080;
 
 const cors = require("cors");
 
@@ -13,7 +14,9 @@ app.use(cors());
 
 app.use(express.json());
 
-const connectDB = require("./config/dbconfig");
+
+connectDB();
+
 
 const hotelRouter = require("./routes/hotel.router");
 
@@ -29,7 +32,6 @@ const { signUpRouter, logInRouter } = require("./routes/auth.router");
 
 const wishlistRouter = require("./routes/wishlist.router");
 
-connectDB();
 
 app.get("/", (req, res) => {
   res.send("hello users");
@@ -51,9 +53,9 @@ app.use("/auth", logInRouter);
 
 app.use("/api/wishlist", wishlistRouter);
 
-mongoose.connection.once("open", () => {
-  console.log("connected to DB");
-  app.listen(process.env.PORT || PORT, () => {
-    console.log("server is running");
-  });
-});
+mongoose.connection.once("open", ()=> {
+    console.log("connected to DB");
+    app.listen(process.env.PORT || Port, ()=> {
+        console.log("Server is running")
+    })
+})
