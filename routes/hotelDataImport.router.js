@@ -7,6 +7,7 @@ const hotels =require('../database/hotels');
 const hotelDbRouter= express.Router();
 
 
+
 hotelDbRouter.route("/").
 post( async(req,res)=>{
 
