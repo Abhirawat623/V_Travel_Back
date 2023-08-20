@@ -16,7 +16,6 @@ const categories = {
         { id: uuid(), category: "A-frames" },
         { id: uuid(), category: "Treehouses" },
         { id: uuid(), category: "Tropical" },
-        { id: uuid(), category: "Bed & Breakfast" },
         { id: uuid(), category: "Caves" },
         { id: uuid(), category: "Shared Homes" },
         { id: uuid(), category: "Earth Homes" },
