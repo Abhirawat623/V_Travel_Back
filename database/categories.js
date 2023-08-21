@@ -5,7 +5,6 @@ const categories = {
         { id: uuid(), category: "National Parks" },
         { id: uuid(), category: "Tiny Homes" },
         { id: uuid(), category: "Farms" },
-        { id: uuid(), category: "Golfing" },
         { id: uuid(), category: "Island" },
         { id: uuid(), category: "Campervans" },
         { id: uuid(), category: "Cabins" },
