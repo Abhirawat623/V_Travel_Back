@@ -4689,48 +4689,7 @@ const hotels = {
     },
 
     // from here
-    {
-      id: uuid(),
-      name: "Folktales ; a Boutique Homestay & Artist Retreat#",
-      category: "National Parks",
-      image:
-        "https://a0.muscache.com/im/pictures/cfdf5973-9fc1-42d3-bde1-a072fdbe1825.jpg?im_w=1200",
-      imageArr: [
-        "https://a0.muscache.com/im/pictures/c7ecaa29-a2a6-4e50-8dd5-a4719096fb4b.jpg?im_w=720",
-        "https://a0.muscache.com/im/pictures/d9f4455c-f29b-4068-81b8-c05957239930.jpg?im_w=720",
-        "https://a0.muscache.com/im/pictures/eba3d6d8-8b5b-43a0-b1d4-05a4bb1c578b.jpg?im_w=720",
-        "https://a0.muscache.com/im/pictures/941cc6e4-4178-489b-b92c-1df3af7a3464.jpg?im_w=720",
-      ],
-      address: "Rakchham",
-      city: "Rakchham",
-      state: "Himachal Pradesh",
-      country: "India",
-      price: 1850,
-      rating: 4.92,
-      numberOfBathrooms: 3,
-      numberOfBeds: 2,
-      numberOfguest: 5,
-      numberOfBedrooms: 2,
-      numberOfStudies: 3,
-      hostName: "Ishan",
-      hostJoinedOn: "July 2015",
-      ameneties: ["Kitchen", "Wifi", "Pets Allowed"],
-      healthAndSafety: [
-        "No Smoke alarm",
-        "No Carbon monoxide alarm",
-        "Nearby lake, river, other body of water",
-      ],
-      houseRules: [
-        "Check-in: 12:00 pm - 7:00 pm",
-        "Check out: 10:00 am",
-        "Self check-in with lockbox",
-        "Pets are allowed",
-        "No smoking",
-        "No parties or events",
-      ],
-      propertyType: "House",
-      isCancelable: true,
-    },
+    
     {
       id: uuid(),
       name: "Free Birds, Charang",
