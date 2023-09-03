@@ -48,9 +48,9 @@ app.use("/api/categories", categoriesRouter);
 
 app.use("/api/hotels", singleHotelRouter);
 
-app.use("/auth", signUpRouter);
+app.use("/api/auth", signUpRouter);
 
-app.use("/auth", logInRouter);
+app.use("/api/auth", logInRouter);
 
 app.use("/api/wishlist", wishlistRouter);
 
